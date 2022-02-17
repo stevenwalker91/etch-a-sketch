@@ -1,10 +1,66 @@
+h1 {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 80px;
+}
+
+body {
+    font-family: sans-serif;
+    background-color:rgb(61, 59, 59);
+    color:white;
+}
+
 .canvas {
     display: grid;
     /*grid-template-columns: repeat(70, 1fr);*/
     width: 500px;
     height: 500px;
+    border: 0.1px solid gainsboro;  
 }
 
-.cell {
+.cell-border {
     border: 0.1px solid gainsboro;
+}
+
+.controls, .main, .body, .header {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+
+.controls {
+    flex-direction: column;
+    min-width: 200px;
+    justify-content: center;
+    gap: 10px;
+    align-items:stretch;
+
+}
+
+.body, .header {
+    margin-right: auto;
+    margin-left: auto;
+    flex-wrap: wrap;
+}
+
+button {
+    background-color: rgb(61, 59, 59);
+    border: 1px solid white;
+    padding: 5px;
+    color: white;
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 1;
+}
+
+.selected {
+    color: rgb(61, 59, 59);
+    background-color: white;
+
+}
+.selected.mode {
+    opacity: 1;
+    cursor:auto;
 }
