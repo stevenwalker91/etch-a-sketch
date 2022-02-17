@@ -56,16 +56,16 @@ function generateRandomRGB(){
 
     for (i = 0; i < 3; i++) {
         if (i < 2) {
-            rgb +=  `${Math.floor(Math.random() * 99)}, `;
+            rgb +=  `${Math.floor(Math.random() * 255)}, `;
         } else {
-            rgb +=  `${Math.floor(Math.random() * 99)})`; 
+            rgb +=  `${Math.floor(Math.random() * 255)})`; 
         }
     }
     return(rgb);
 }
 
 function toggleBorders(){
-    console.log('toggle');
+
     document.querySelectorAll('.cell').forEach(cell => cell.classList.toggle("cell-border"));
     toggleBorder.classList.toggle("selected");
 }

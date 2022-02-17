@@ -1,8 +1,3 @@
 # etch-a-sketch
 
-** bold **
-
- - one
- - two 
-   - three
-   - 
+[Live Demo](https://woftis.github.io/etch-a-sketch/)

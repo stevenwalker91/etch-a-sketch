@@ -64,3 +64,11 @@ button:hover {
     opacity: 1;
     cursor:auto;
 }
+
+.modes {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
