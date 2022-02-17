@@ -1,6 +1,6 @@
 .canvas {
     display: grid;
-    grid-template-columns: repeat(20, 1fr);
+    /*grid-template-columns: repeat(70, 1fr);*/
     width: 500px;
     height: 500px;
 }
