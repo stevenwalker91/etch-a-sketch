@@ -48,6 +48,29 @@ function colourCell(){
         this.style.backgroundColor = '';
     } else if (mode == 'rainbow-mode') {
         this.style.backgroundColor = generateRandomRGB();
+    } else if (mode == 'shade-mode') {
+        let currentBackground = this.style.backgroundColor;
+        let opacity = currentBackground.split(',')[3];
+        let setOpacity = 0;
+
+
+        if (opacity != null) {
+            opacity = Number(opacity.substring(0, opacity.length - 1));
+
+        }
+
+        if (opacity < 0.8 ){
+            setOpacity = opacity + 0.2;
+
+        } else if (opacity == null) {
+
+            setOpacity = 0.2;
+        }
+        else {
+            setOpacity = 0.8; 
+        }
+
+        this.style.backgroundColor = `rgba(255, 255, 255, ${setOpacity})`;
     }
 }
 
@@ -76,7 +99,7 @@ function selectMode(){
         return;
     }
 
-    //get the button of the mode crrently existed and change the class so no longer active
+    //get the button of the mode crrently selected and change the class so no longer active
     const currentSelectedBtn = document.getElementById(mode);
     currentSelectedBtn.classList.toggle("selected");
 
@@ -86,6 +109,7 @@ function selectMode(){
     
 ;}
 
+//grab a bunch of elements to be used later for event listeners
 const userCanvasSize = document.getElementById('number');
 const toggleBorder = document.getElementById('borders');
 const clearBtn = document.getElementById('clear');
